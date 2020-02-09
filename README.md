@@ -7,7 +7,7 @@ Hay que crear el topic, en este caso le llamaremos "practica" y el producer. Se 
 - Comandos y capturas:
 
 Creación del topic
-```python 
+```scala 
 root@debian:/home/kafka/kafka_2.11-2.4.0# bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic practica
 ```
 Adjunto captura línea de código:
@@ -15,7 +15,7 @@ Adjunto captura línea de código:
 https://drive.google.com/open?id=1_upDVhWwtkMgW-COy3Og08bKt4TyqCTJ
 
 Creación del Producer
-```python
+```scala
 root@debian:/home/kafka/kafka_2.11-2.4.0# cat personal.json | bin/kafka-console-producer.sh --broker-list localhost:9092 --topic practica >/dev/null
 ```
 Adjunto captura línea de código
@@ -28,7 +28,7 @@ https://drive.google.com/open?id=1eyhnx0q7fqEYnbxsQpX7oxe6Z8qMI-TB
 Para la segunda parte de la práctica se crea un "Consumer" en Scala y se aplican los filtros "Bea" y "Willard" al archivo personal.json .
 - Código Scala y Captura del resultado
 
-```python
+```scala
 import java.util.Properties
 
 import scala.collection.JavaConverters._
